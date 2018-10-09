@@ -12,28 +12,18 @@ router.get('/', function(req, res) {
   });
 });
 
-router.get('/:id', function(req, res) {
+router.post('/', function(req, res) {
   var collection = db.get('car');
-  collection.findOne({
-    _id: req.params.id
-  }, function(err, car) {
-    if (err) throw err;
-
-    res.json(video);
-  });
-});
-router.put('/:id', function(req, res) {
-  var collection = db.get('car');
-  collection.update({
-    _id: req.params.id
-  }, {
+  collection.insert({
     brand: req.body.brand,
     state: req.body.state,
     availability: req.body.availability
+
   }, function(err, car) {
     if (err) throw err;
 
-    res.json(video);
+    res.json(car);
   });
 });
+
 module.exports = router;

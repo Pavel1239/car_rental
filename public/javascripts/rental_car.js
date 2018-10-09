@@ -1,40 +1,51 @@
 var app = angular.module('rental_car', ['ngResource', 'ngRoute']);
 
-// GET /api/car/ {
-//   id
-// }
-// PUT /api/car / {
-//   id
-// }
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'partials/home.html',
-      controller: 'HomeCtrl'
+      templateUrl: 'partials/contract.html',
+        controller: 'ContractCtrl'
     })
-    .when('/add-car', {
-      templateUrl: 'partials/car_form.html',
-      controller: 'AddCarCtrl'
+    .when('/car', {
+      templateUrl: 'partials/car.html',
+      controller: 'CarCtrl'
+    })
+    .when('/client', {
+      templateUrl: 'partials/client.html',
+        controller: 'ClientCtrl'
     })
     .otherwise({
       redirectTo: '/'
     });
 }]);
 
-app.controller('HomeCtrl', ['$scope', '$resource',
-  function($scope, $resource) {
-    var Car = $resource('/api/car');
-    Car.query(function(car) {
-      $scope.car = car;
-    });
+app.controller('CarCtrl', ['$scope', '$resource', '$location',
+  function($scope, $resource, $location) {
+    $scope.save = function() {
+      var Cars = $resource('/api/car');
+      Cars.save($scope.car, function() {
+        $location.path('/car');
+      });
+    };
   }
 ]);
 
-app.controller('AddCarCtrl', ['$scope', '$resource', '$location',
+app.controller('ContractCtrl', ['$scope', '$resource', '$location',
   function($scope, $resource, $location) {
     $scope.save = function() {
-      var Car = $resource('/api/car');
-      Car.save($scope.car, function() {
+      var Contracts = $resource('/api/contract');
+      Contracts.save($scope.contract, function() {
+        $location.path('/');
+      });
+    };
+  }
+]);
+
+app.controller('ClientCtrl', ['$scope', '$resource', '$location',
+  function($scope, $resource, $location) {
+    $scope.save = function() {
+      var Clients = $resource('/api/client');
+      Clients.save($scope.client, function() {
         $location.path('/');
       });
     };

@@ -1,25 +1,26 @@
-<h1>Add a User</h1>
+
+<h1>Add a contract</h1>
 
 <form>
   <div class="form-group">
-    <label>id_client</label>
-    <input class="form-control"></input>
+    <label>ID client</label>
+    <input class="form-control"  ng-model="contract.id_client" ></input>
   </div>
   <div class="form-group">
-    <label>id_car</label>
-    <input class="form-control"></input>
+    <label>ID car</label>
+    <input class="form-control"  ng-model="contract.id_car" ></input>
   </div>
   <div class="form-group">
-    <label>date_begin</label>
-    <input class="form-control"></input>
+    <label>Date begin</label>
+    <input class="form-control"  ng-model="contract.date_begin" ></input>
   </div>
   <div class="form-group">
-    <label>date_end</label>
-    <input class="form-control"></input>
+    <label>Date end</label>
+    <input class="form-control"  ng-model="contract.date_end" ></input>
   </div>
   <div class="form-group">
-    <label>price</label>
-    <input class="form-control"></input>
+    <label>Price</label>
+    <input class="form-control"  ng-model="contract.price" ></input>
   </div>
-  <input type="button" class="btn btn-primary" value="Save"></input>
+  <input type="button" class="btn btn-primary" value="Save" ng-click="save()"></input>
 </form>
