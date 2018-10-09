@@ -5,8 +5,8 @@ var monk = require('monk');
 var db = monk('localhost:27017/rental_car');
 
 router.get('/', function(req, res) {
-var collection = db.get('client'); collection.find({}, function(err, client){
-if (err) throw err; res.json(client);
+var collection = db.get('contract'); collection.find({}, function(err, contract){
+if (err) throw err; res.json(contract);
 });
 });
 

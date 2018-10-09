@@ -6,8 +6,44 @@ html(ng-app='rental_car')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js')
     script(src='/javascripts/rental_car.js')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    script(type='text/javascript', src='/javascripts/anime.min.js')
+    script(type='text/javascript', src='/javascripts/common.js')
+    //- link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-
-  body
-    block content
+    link(href='https://fonts.googleapis.com/css?family=Poppins:400,500', rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    body
+      .wrap
+        header
+          .header
+            .logo
+              h3 SAVONOV
+            input#menu-chekbox(type='checkbox', name='', value='')
+            nav.nav(role='navigation')
+              label.toggle-button(for='menu-chekbox', data-open='Menu', data-close='Close oncklick')
+              ul.main-menu
+                li
+                  a(href='/') CONTRACT
+                li
+                  a(href='car.html') CAR
+                li
+                  a(href='user.html') CLIENT
+        main
+          section.top-slide
+            .top-container
+              .top_anime
+                h2 We believe
+              .top_anime
+                h2 Perfect DESIGN by SAVONOV
+              .top_anime
+                p consectetur adipisicing elit
+              .top_anime
+                p Lorem ipsum dolor sit amet dolor dolor
+              .top_anime
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit
+          section.contract
+             .contract-container
+                block content
+    
+    
