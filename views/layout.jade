@@ -18,13 +18,14 @@ html(ng-app='rental_car')
         header
           .header
             .logo
-              h3 SAVONOV
+              h3
+                 a(href='/#/') SAVONOV
             input#menu-chekbox(type='checkbox', name='', value='')
             nav.nav(role='navigation')
               label.toggle-button(for='menu-chekbox', data-open='Menu', data-close='Close oncklick')
               ul.main-menu
                 li
-                  a(href='/#/') CONTRACT
+                  a(href='/#/contract') CONTRACT
                 li
                   a(href='/#/car') CAR
                 li
@@ -42,8 +43,6 @@ html(ng-app='rental_car')
                 p Lorem ipsum dolor sit amet dolor dolor
               .top_anime
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit
-          section.contract
-             .contract-container
-                block content
+          block content
     
     

@@ -12,11 +12,37 @@ router.get('/', function(req, res) {
   });
 });
 
+router.get('/:id', function(req, res) {
+  var collection = db.get('car');
+  collection.findOne({
+    _id: req.params.id
+  }, function(err, car) {
+    if (err) throw err;
+
+    res.json(car);
+  });
+});
+
+router.put('/:id', function(req, res) {
+  var collection = db.get('videos');
+  collection.update({
+    _id: req.params.id
+  }, {
+    title: req.body.title,
+    description: req.body.description
+  }, function(err, video) {
+    if (err) throw err;
+
+    res.json(video);
+  });
+});
+
 router.post('/', function(req, res) {
   var collection = db.get('car');
   collection.insert({
     brand: req.body.brand,
     state: req.body.state,
+    color: req.body.color,
     availability: req.body.availability
 
   }, function(err, car) {

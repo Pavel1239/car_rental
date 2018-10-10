@@ -3,21 +3,30 @@ var app = angular.module('rental_car', ['ngResource', 'ngRoute']);
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'partials/contract.html',
-        controller: 'ContractCtrl'
+      templateUrl: 'partials/home.html'
     })
     .when('/car', {
-      templateUrl: 'partials/car.html',
+      templateUrl: 'partials/car/car.html',
       controller: 'CarCtrl'
     })
     .when('/client', {
-      templateUrl: 'partials/client.html',
-        controller: 'ClientCtrl'
+      templateUrl: 'partials/client/client.html',
+      controller: 'ClientCtrl'
     })
+
+    .when('/contract', {
+      templateUrl: 'partials/contract/contract.html',
+      controller: 'ContractCtrl'
+    })
+
     .otherwise({
       redirectTo: '/'
     });
 }]);
+
+app.controller('HomeCtrl', ['$scope', '$resource',
+
+]);
 
 app.controller('CarCtrl', ['$scope', '$resource', '$location',
   function($scope, $resource, $location) {
@@ -25,6 +34,9 @@ app.controller('CarCtrl', ['$scope', '$resource', '$location',
       var Cars = $resource('/api/car');
       Cars.save($scope.car, function() {
         $location.path('/car');
+      });
+      Cars.query(function(car) {
+        $scope.car = car;
       });
     };
   }

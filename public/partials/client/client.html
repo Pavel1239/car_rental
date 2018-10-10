@@ -1,0 +1,22 @@
+<section class="contract">
+  <div class="contract-container">
+    <h2>Add a User</h2>
+
+    <form>
+      <div class="form-group">
+        <label>FIO</label>
+        <input class="form-control" ng-model="client.FIO"></input>
+      </div>
+      <div class="form-group">
+        <label>Passport</label>
+        <input class="form-control" ng-model="client.passport"></input>
+      </div>
+      <div class="form-group">
+        <label>Phone</label>
+        <input class="form-control" ng-model="client.tel"></input>
+      </div>
+
+      <input type="button" class="btn btn-primary" value="Save" ng-click="save()"></input>
+    </form>
+  </div>
+</section>
