@@ -28,6 +28,8 @@ app.controller('HomeCtrl', ['$scope', '$resource',
 
 ]);
 
+//фзз
+
 app.controller('CarCtrl', ['$scope', '$resource', '$location',
   function($scope, $resource, $location) {
     $scope.save = function() {
