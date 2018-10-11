@@ -1,0 +1,13 @@
+<section class="contract">
+    <div class="contract-container">
+        <h1>Delete Contract</h1>
+        <p>
+            Are you sure you want to delete this contract?
+        </p>
+        <ul>
+            <li>Title: {{contract._id}}</li>
+        </ul>
+        <input type="button" value="Yes, Delete" class="btn btn-danger" ng-click="delete()" />
+        <a class="btn btn-default" href="/#/">No, Go Back</a>
+    </div>
+</section>

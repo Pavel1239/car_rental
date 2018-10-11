@@ -1,22 +1,16 @@
 <section class="contract">
   <div class="contract-container">
-    <h2>Add a User</h2>
+      <div class="li_client">
+          <h2>Client</h2>
 
-    <form>
-      <div class="form-group">
-        <label>FIO</label>
-        <input class="form-control" ng-model="client.FIO"></input>
-      </div>
-      <div class="form-group">
-        <label>Passport</label>
-        <input class="form-control" ng-model="client.passport"></input>
-      </div>
-      <div class="form-group">
-        <label>Phone</label>
-        <input class="form-control" ng-model="client.tel"></input>
-      </div>
+          <ol>
+            <li ng-repeat='client in client'>{{client.FIO}}
+                <a href="/#/client/{{client._id}}"> <img src="/images/edit.png" alt=""></a>
+                <a href="/#/client/delete/{{client._id}}"><img src="/images/del.png" alt=""></a>
+            </li>
+          </ol>
+        </div>  
+        <a href="/#/add_client"><button><img src="/images/add.png" alt=""></button></a>
 
-      <input type="button" class="btn btn-primary" value="Save" ng-click="save()"></input>
-    </form>
   </div>
 </section>

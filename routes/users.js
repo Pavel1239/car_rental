@@ -12,6 +12,33 @@ router.get('/', function(req, res) {
   });
 });
 
+
+router.get('/:id', function (req, res) {
+  var collection = db.get('client');
+  collection.findOne({
+    _id: req.params.id
+  }, function (err, client) {
+    if (err) throw err;
+    res.json(client);
+  });
+});
+
+router.put('/:id', function (req, res) {
+  var collection = db.get('client');
+  collection.update({
+    _id: req.params.id
+  }, {
+    FIO: req.body.FIO,
+    passport: req.body.passport,
+    tel: req.body.tel
+  }, function (err, client) {
+    if (err) throw err;
+
+    res.json(client);
+  });
+});
+
+
 router.post('/', function(req, res) {
   var collection = db.get('client');
   collection.insert({
@@ -26,5 +53,15 @@ router.post('/', function(req, res) {
   });
 });
 
+router.delete('/:id', function (req, res) {
+  var collection = db.get('client');
+  collection.remove({
+    _id: req.params.id
+  }, function (err, client) {
+    if (err) throw err;
+
+    res.json(client);
+  });
+});
 
 module.exports = router;
