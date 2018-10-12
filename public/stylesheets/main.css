@@ -20,9 +20,11 @@ header {
 header li {
   list-style-type: none;
 }
-ol{
+
+ol {
   margin-left: 2%;
 }
+
 a {
   text-decoration: none;
   color: #ececec;
@@ -110,9 +112,10 @@ main a {
   color: blue;
 }
 
-.home{
+.home {
   margin-top: 2%;
 }
+
 .primary {
   color: black;
 }
@@ -129,22 +132,23 @@ main a {
   margin: 0 auto;
 }
 
-.contract h2, h1{
+.contract h2,
+h1 {
   text-align: center;
   margin-bottom: 3%;
 }
 
-.contact{
+.contact {
   color: #000;
   font-weight: bold;
   margin-right: 10px
-} 
+}
 
 .contract div {
   padding: 20px 2px;
 }
 
-.contract span{
+.contract span {
   font-size: 17px;
 }
 
@@ -191,7 +195,9 @@ button {
   margin-bottom: 20px;
 }
 
-.head_block, button, span{
+.head_block,
+button,
+span {
   font-size: 15px;
   border-radius: 20px;
 
@@ -225,7 +231,21 @@ button {
   padding-left: 10px;
 }
 
+.contract .btn-danger {
+  background-color: red;
+  width: 50%;
+}
+
+a.btn.btn-default {
+  padding: 9px;
+}
+
+.delete ul, p{
+  padding: 10px 0;
+}
+
 @media screen and (max-width: 430px) {
+  
   .form-group label {
     font-size: 15px;
   }
