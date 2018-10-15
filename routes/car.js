@@ -20,7 +20,7 @@ router.get('/:id', function (req, res) {
     if (err) throw err;
     res.json(car);
   });
-});
+}); 
 
 router.put('/:id', function (req, res) {
   var collection = db.get('car');

@@ -72,9 +72,11 @@ a {
 }
 
 .top-slide {
+  background: #323A44;
   background-image: url("../images/car.jpg");
   -webkit-background-size: cover;
   background-size: cover;
+  padding: 4em;
 }
 
 .top-slide h2 {
@@ -94,6 +96,7 @@ a {
   width: 82%;
   margin: 0 auto;
   padding: 120px 0;
+  max-width: 1400px;
 }
 
 .top-container div {
@@ -231,6 +234,10 @@ span {
   padding-left: 10px;
 }
 
+.check {
+  margin-right: 45%;
+}
+
 .contract .btn-danger {
   background-color: red;
   width: 50%;
@@ -240,23 +247,53 @@ a.btn.btn-default {
   padding: 9px;
 }
 
-.delete ul, p{
+.delete ul,
+p {
   padding: 10px 0;
 }
 
 @media screen and (max-width: 430px) {
-  
+
   .form-group label {
     font-size: 15px;
   }
 
   .logo {
-    padding-left: 5px;
+    padding-left: 0px;
+    font-size: 14px;
+  }
+
+  button,
+  span {
+    font-size: 15px;
+    border-radius: 20px;
+    width: 96%;
+  }
+
+  .top-container p {
+    display: none;
+  }
+
+  .contract div {
+    padding: 10px 7px;
+  }
+
+  .container_home {
+    display: block;
+  }
+
+  .container_home>.block {
+    width: 100%;
+    padding: 20px 0px;
   }
 
   .main-menu a {
     font-size: 14px;
-    padding: 6px 14px;
+    padding: 0px 7px;
+  }
+
+  .top-slide {
+    padding-left: 0%;
   }
 
   .top-slide h2 {
@@ -268,7 +305,7 @@ a.btn.btn-default {
   }
 
   .top-container {
-    padding: 76px 0;
+    padding: 0 0;
   }
 
   .top_anime {

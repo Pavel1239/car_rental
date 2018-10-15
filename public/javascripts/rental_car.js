@@ -93,8 +93,6 @@ app.controller('ClientCtrl', ['$scope', '$resource',
   }
 ]);
 
-
-
 app.controller('ContractCtrl', ['$scope', '$resource',
   function ($scope, $resource) {
     var Contracts = $resource('/api/contract');
@@ -103,7 +101,6 @@ app.controller('ContractCtrl', ['$scope', '$resource',
     });
   }
 ]);
-
 
 
 app.controller('AddCarCtrl', ['$scope', '$resource', '$location',
