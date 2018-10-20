@@ -12,16 +12,13 @@
         <input class="form-control" ng-model="contract.id_car"></input>
       </div>
       <div class="form-group">
-        <label>Date begin</label>
-        <input class="form-control" ng-model="contract.date_begin"></input>
+        <label>Day</label>
+        <input class="form-control" id="db"  onchange="reg()" ng-model="contract.date_begin"></input>
       </div>
-      <div class="form-group">
-        <label>Date end</label>
-        <input class="form-control" ng-model="contract.date_end"></input>
-      </div>
+    
       <div class="form-group">
         <label>Price</label>
-        <input class="form-control" ng-model="contract.price"></input>
+        <input class="form-control" id="price" ng-model="contract.price"></input>
       </div>
       <input type="button" class="btn btn-primary" value="Save" ng-click="save()"></input>
     </form>

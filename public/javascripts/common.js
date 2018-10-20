@@ -4,3 +4,13 @@ var cssSelector = anime({
   easing: 'linear',
   duration: 600
 });
+
+function reg() {
+  var datebegin = document.getElementById('db').value;
+
+ document.getElementById('price').value = datebegin * 323;
+
+
+
+
+}

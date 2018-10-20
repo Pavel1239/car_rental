@@ -73,10 +73,10 @@ a {
 
 .top-slide {
   background: #323A44;
-  background-image: url("../images/car.jpg");
+  /* background-image: url("../images/car.jpg");   */
   -webkit-background-size: cover;
   background-size: cover;
-  padding: 4em;
+  padding: 2em;
 }
 
 .top-slide h2 {
@@ -202,10 +202,12 @@ button {
 button,
 span {
   font-size: 15px;
-  border-radius: 20px;
 
 }
 
+.top-anime p{
+  display: none;
+}
 
 .form-group {
   height: 40px;
@@ -311,4 +313,8 @@ p {
   .top_anime {
     width: 80vw;
   }
+}
+
+.top_anime p {
+  display: none;
 }
